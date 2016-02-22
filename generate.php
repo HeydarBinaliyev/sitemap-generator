@@ -21,13 +21,7 @@
 				//delete "/" tags 
 				$node=substr_replace($node,"",0,1);//baştaki / i sil
 				$node=substr_replace($node,"",-1);//sondaki / i sil
-				//if(strpos($node,"/")!==false){
-					//$gv->addEdge(array('http://'.GetMainUrl($object) => $node));
-					//if its not a main link
-				//}else{
-					//if its a main link,put it into graph
-					$gv->addEdge(array('http://'.GetMainUrl($object) => $node));
-				//}
+				$gv->addEdge(array('http://'.GetMainUrl($object) => $node));
 			}		
 		}
 		return $gv;
@@ -44,15 +38,9 @@
 				//delete "/" tags 
 				$node=substr_replace($node,"",0,1);//baştaki / i sil
 				$node=substr_replace($node,"",-1);//sondaki / i sil
-				//if(strpos($node,"/")!==false){
-					//if its not a main link
-					//if there is a link like http://majawyh.com/fashion/category
-					//array_push($arr,$node);
-				//}else{
-					//if its a main link,put it into graph
-					array_push($arr,$node);
-				//}
-			}		
+				array_push($arr,$node);
+				
+				}		
 		}
 		return $arr;
 	}
