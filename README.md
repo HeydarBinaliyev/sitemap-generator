@@ -1,5 +1,5 @@
 # sitemap-generator
-php script for generate sitemap
+PHP script for generate sitemap.Works on sites which is have  .co or .com extentions   
 
 #requirements
 linkchecker and php>=5.4
